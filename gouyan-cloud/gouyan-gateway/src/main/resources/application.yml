@@ -1,0 +1,99 @@
+server:
+  port: 8181
+
+spring:
+  application:
+    name: cloud-gateway
+  devtools:
+    restart:
+      enabled: true
+  profiles:
+    active: dev
+  cloud:
+    config:
+      fail-fast: true
+      name: ${spring.application.name}
+      profile: ${spring.profiles.active}
+      discovery:
+        enabled: true
+        service-id: cloud-gateway
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+      routes:
+        - id: gouyan-actor
+          uri: lb://gouyan-actor
+          predicates:
+            - Path=/sysActor/**,/sysActorMovie/**,/sysActorRole/**
+          filters:
+            - StripPrefix=0
+            - DedupeResponseHeader=Access-Control-Allow-Credentials Access-Control-Allow-Origin
+
+        - id: gouyan-auth
+          uri: lb://gouyan-auth
+          predicates:
+            - Path=/sysResource/**,/sysRole/**,/sysSession/**,/sysUser/**,/sysUserHobby/**,/captcha/**,/upload/**,/images/**
+          filters:
+            - StripPrefix=0
+            - DedupeResponseHeader=Access-Control-Allow-Credentials Access-Control-Allow-Origin
+
+        - id: gouyan-bill
+          uri: lb://gouyan-bill
+          predicates:
+            - Path=/sysBill/**
+          filters:
+            - StripPrefix=0
+            - DedupeResponseHeader=Access-Control-Allow-Credentials Access-Control-Allow-Origin
+
+
+        - id: gouyan-cinema
+          uri: lb://gouyan-cinema
+          predicates:
+            - Path=/sysCinemaArea/**,/sysCinemaBrand/**,/sysCinema/**
+          filters:
+            - StripPrefix=0
+            - DedupeResponseHeader=Access-Control-Allow-Credentials Access-Control-Allow-Origin
+
+        - id: gouyan-hall
+          uri: lb://gouyan-hall
+          predicates:
+            - Path=/sysHallCategory/**,/sysHall/**
+          filters:
+            - StripPrefix=0
+            - DedupeResponseHeader=Access-Control-Allow-Credentials Access-Control-Allow-Origin
+
+        - id: gouyan-movie
+          uri: lb://gouyan-movie
+          predicates:
+            - Path=/sysMovieAge/**,/sysMovieArea/**,/sysMovieCategory/**,/sysMovieComment/**,/sysMovie/**,/sysMovieRuntime/**,/sysMovieToCategory/**
+          filters:
+            - StripPrefix=0
+            - DedupeResponseHeader=Access-Control-Allow-Credentials Access-Control-Allow-Origin
+
+
+
+eureka:
+  client: #客户端注册进eureka服务列表内
+    service-url:
+       defaultZone: http://127.0.0.1:7002/eureka
+  instance:
+    instance-id:  ${spring.application.name}:${server.port}
+    prefer-ip-address: true     #访问路径可以显示IP地址
+
+hystrix:
+    command:
+      default:  #default全局有效，service id指定应用有效
+        execution:
+          timeout:
+            enabled: true
+          isolation:
+            thread:
+              timeoutInMilliseconds: 5000 #断路器超时时间，默认1000ms
+
+# 暴露监控端点
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
