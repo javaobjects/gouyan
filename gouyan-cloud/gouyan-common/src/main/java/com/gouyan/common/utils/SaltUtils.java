@@ -4,7 +4,7 @@ import java.util.Random;
 
 /**
  * 生成随机盐工具类
- * @Author: 华雨欣
+ * @Author: xianxian
  * @Create: 2020-12-08 10:44
  */
 public class SaltUtils {

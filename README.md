@@ -23,7 +23,7 @@
 | Redis        | 7.0.5     | 非关系型数据库                  |
 | Apache-maven | 3.9.0     | Java 项目管理和构建工具           |
 | Nvm          | 1.10      | Node.js 版本管理器            |
-| Node         | 8.12.0    | Node.js JavaScript 运行时环境 |
+| Node         | 14.21.3   | Node.js JavaScript 运行时环境 |
 
 #### 开发工具
 
@@ -654,9 +654,11 @@
 
 
 #### 安装教程
+
 1.  在navicat中运行数据库脚本生成对应的数据库表
-2.  在src/main/resources/application.yml文件里更改数据库名称或数据库密码
-3.  在pom.xml文件的父目录运行 mvn clean spring-boot:run 启动后端
+2.  在每个模块的src/main/resources/application.yml文件里更改数据库名称或数据库密码
+3.  使用IDEA打开gouyan-cloud项目并生成Maven树，配置好Run/Debug Configurations 并左下侧的Services里选择“+”选择Run Configurations type
+4.  依次右键启动对应的Application文件(common/framework/system没有Application)
 4.  启动前端 你可以在package.json的父目录执行下如命令 或者 直接在IDEA里点击也可运行 值得一提的是后两命令分别是打包命令和检查修复命令
 
 ```
@@ -673,16 +675,24 @@ npm run lint
 ```
 + 如下图所示
 
-![](./Images/后端启动_1.png)
-![](./Images/后端启动_2.png)
-![](./Images/前端启动_1.png)
-![](./Images/前端启动_2.png)
-![](./Images/前端启动_3.png)
+![](Images/后端_1.png)
+![](Images/后端_2.png)
+![](Images/后端_3.png)
+![](Images/前端_1.png)
+![](Images/前端_2.png)
+![](Images/前端_3.png)
 
 #### 登录账户
 
-用户名：superadmin
+用户名：admin
 密码：123456
 
 #### 截图
 
+![](Images/gouyan_ms_1.png)
+![](Images/gouyan_ms_2.png)
+![](Images/gouyan_ms_3.png)
+![](Images/gouyan_user_1.png)
+![](Images/gouyan_user_2.png)
+![](Images/gouyan_user_3.png)
+![](Images/gouyan_user_4.png)

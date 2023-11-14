@@ -1,7 +1,7 @@
 package com.gouyan.common.constant;
 
 /**
- * @Author: 华雨欣
+ * @Author: xianxian
  * @Create: 2020-12-03 12:00
  */
 public class MovieRankingList {

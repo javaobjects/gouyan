@@ -4,7 +4,7 @@ import com.gouyan.common.utils.StringUtil;
 
 /**
  * 获取分页请求参数的实体类
- * @Author: 华雨欣
+ * @Author: xianxian
  * @Create: 2020-11-19 16:30
  */
 public class Page {

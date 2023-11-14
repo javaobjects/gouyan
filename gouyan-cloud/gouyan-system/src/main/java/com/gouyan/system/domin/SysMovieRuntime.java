@@ -11,7 +11,7 @@ import java.io.Serializable;
 
 /**
  * 电影播放时段
- * @Author: 华雨欣
+ * @Author: xianxian
  * @Create: 2020-11-20 11:10
  */
 @Data

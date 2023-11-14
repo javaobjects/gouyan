@@ -9,7 +9,7 @@ import java.io.Serializable;
 
 /**
  * 存储电影与电影类别的多对多联系
- * @Author: 华雨欣
+ * @Author: xianxian
  * @Create: 2020-11-30 22:07
  */
 @Data

@@ -5,7 +5,7 @@ import com.gouyan.system.domin.SysMovieComment;
 import java.util.List;
 
 /**
- * @Author: 华雨欣
+ * @Author: xianxian
  * @Create: 2020-11-22 21:48
  */
 public interface SysMovieCommentService {

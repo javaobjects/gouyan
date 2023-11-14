@@ -165,6 +165,12 @@
 					<encoding>${project.build.sourceEncoding}</encoding>
 				</configuration>
 			</plugin>
+			<!-- Spring Boot Maven Plugin 2023-11-13-->
+<!--			<plugin>-->
+<!--				<groupId>org.springframework.boot</groupId>-->
+<!--				<artifactId>spring-boot-maven-plugin</artifactId>-->
+<!--				<version>3.1.5</version> &lt;!&ndash; 指定合适的版本号 &ndash;&gt;-->
+<!--			</plugin>-->
 		</plugins>
 	</build>
 
