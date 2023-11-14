@@ -5,7 +5,7 @@ import com.gouyan.system.domin.SysMovieToCategory;
 import java.util.List;
 
 /**
- * @Author: 华雨欣
+ * @Author: xianxian
  * @Create: 2020-11-30 22:13
  */
 public interface SysMovieToCategoryMapper {

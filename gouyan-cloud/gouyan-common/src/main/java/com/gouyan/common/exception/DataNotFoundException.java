@@ -1,7 +1,7 @@
 package com.gouyan.common.exception;
 
 /**
- * @Author: 华雨欣
+ * @Author: xianxian
  * @Create: 2020-11-24 11:04
  */
 public class DataNotFoundException extends RuntimeException{

@@ -3,7 +3,7 @@
     <el-header>
       <div class="span-container" style="padding: 5px" @click="toWelcome">
         <img src="../assets/logo.png" alt="" height="40px" width="40px">
-        <span>多啦A梦电影后台管理系统</span>
+        <span>狗眼电影后台管理系统</span>
       </div>
       <el-button type="info" @click="logout">退出</el-button>
     </el-header>

@@ -5,7 +5,7 @@ import com.gouyan.system.domin.SysResource;
 import java.util.List;
 
 /**
- * @Author: 华雨欣
+ * @Author: xianxian
  * @Create: 2020-11-19 22:52
  */
 public interface SysResourceMapper {

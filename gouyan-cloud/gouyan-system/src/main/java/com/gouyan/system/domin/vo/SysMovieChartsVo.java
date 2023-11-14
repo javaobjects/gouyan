@@ -3,7 +3,7 @@ package com.gouyan.system.domin.vo;
 import java.io.Serializable;
 
 /**
- * @Author: 华雨欣
+ * @Author: xianxian
  * @Create: 2020-12-03 11:22
  */
 public class SysMovieChartsVo implements Serializable {

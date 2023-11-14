@@ -5,7 +5,7 @@ import java.util.HashMap;
 
 /**
  * 响应消息结果，使用Map存储
- * @Author: 华雨欣
+ * @Author: xianxian
  * @Create: 2020-11-17 23:03
  */
 public class ResponseResult extends HashMap<String, Object> {

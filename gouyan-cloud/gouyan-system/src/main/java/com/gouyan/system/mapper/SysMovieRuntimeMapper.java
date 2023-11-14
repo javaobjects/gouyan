@@ -6,7 +6,7 @@ import com.gouyan.system.domin.SysUserHobby;
 import java.util.List;
 
 /**
- * @Author: 华雨欣
+ * @Author: xianxian
  * @Create: 2020-11-20 11:21
  */
 public interface SysMovieRuntimeMapper {

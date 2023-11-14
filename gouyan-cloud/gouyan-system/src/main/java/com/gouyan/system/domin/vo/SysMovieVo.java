@@ -9,7 +9,7 @@ import java.util.Date;
 
 /**
  * 封装电影查询的条件
- * @Author: 华雨欣
+ * @Author: xianxian
  * @Create: 2020-12-01 10:58
  */
 @Data

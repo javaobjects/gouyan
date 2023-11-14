@@ -52,7 +52,7 @@ pagehelper:
   params: count=countSql
 
 server:
-  port: 9008
+  port: 9009
 
 # anji-plus验证码配置
 aj:
